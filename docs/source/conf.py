@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'SimRop'
+copyright = '2025, Flanders Make vzw'
+author = 'Flanders Make vzw'
 
 release = '0.1'
 version = '0.1.0'

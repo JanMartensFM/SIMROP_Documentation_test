@@ -1,22 +1,31 @@
-Welcome to Lumache's documentation!
+Welcome to the Simrop documentation.
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**Simrop** is a framework to build robotics applications using a skill based approach and supporting 
+Behavior Trees to orchestrate the skills.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
-.. note::
-
-   This project is under active development.
-
-Contents
---------
 
 .. toctree::
+   :maxdepth: 2
+   :caption: Welcome
 
-   usage
-   api
+   welcome/introduction
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Tutorials
+
+   tutorials/robotic-cell
+   tutorials/task-manager
+   tutorials/lifecycle-manager
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Advanced Tutorials
+
+   advanced-tutorials/service-in-cpp
+   advanced-tutorials/behavior-tree-node
+   advanced-tutorials/configuration-files
+

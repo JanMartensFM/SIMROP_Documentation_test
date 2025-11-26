@@ -1,0 +1,46 @@
+### Configuring a Component Manager and its components
+In order to make this flexible, multiple configuration files are present.
+
+#### Configure which components will be instantiated
+
+The first configuration file describes the components or plugins that will be instantiated. This is an example of such a file, in this case a task_plugin.yaml:
+
+```yaml
+plugins:
+  - id: "task_1"
+    type: "fm_sr_task::BehaviorTreeTask"
+```
+
+When a Task Manager is instantiated and its configure method is called, it will create a node with name **task_1** and of type **fm_sr_task::BehaviorTreeTask**.
+
+#### Configure the components that will be instantiated
+
+The components that are instantiated may require extra configuration settings, specific to their type. A second configuration file is present to allow this. This is for instance a task_configuration.yaml:
+
+```yaml
+task_1:
+  libraries: 
+    - fm_sr_robot_bt_lib
+```
+
+When the node with name **task_1** is configured, the matching node in the task_configuration.yaml file will be passed to the task. It is up to the task to read its configuration. In this way every component is free to retrieve the data that it needs. For a robot this may for instance be an IP address and a maximum speed.
+
+
+#### Using a different configuration
+
+A component manager has a default configuration. In an actual setup the configuration will probably not be the same as this default setup. So we need to be able to override the default configuration. When starting a component manager, a parameter config_package_name can be passed to specify which package contains it's configuration. This is the syntax to use:
+
+```
+ros2 run fm_sr_task task_manager --ros-args -p config_package_name:=fm_sr_robot
+```
+
+When the `task_manager` is configured, it will load its configuration files from the package `fm_sr_robot`.
+
+The documentation of the Component Manager that you want to use should specify the names of the configuration files that it will use.
+
+Note that a configuration package can contain configuration files for different Component Managers, since normally these files should be different. You could for instance have one central configuration package which is used by all the Component Managers that you will use, and then run them using:
+
+```
+ros2 run fm_sr_task task_manager --ros-args -p config_package_name:=palletizing_configuration
+ros2 run fm_sr_robot robot_manager --ros-args -p config_package_name:=palletizing_configuration
+```
