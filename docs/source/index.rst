@@ -18,14 +18,12 @@ Behavior Trees to orchestrate the skills.
 
    tutorials/robotic-cell
    tutorials/task-manager
-   tutorials/lifecycle-manager
 
 
 .. toctree::
    :maxdepth: 1
    :caption: Advanced Tutorials
 
-   advanced-tutorials/service-in-cpp
    advanced-tutorials/behavior-tree-node
    advanced-tutorials/configuration-files
 
