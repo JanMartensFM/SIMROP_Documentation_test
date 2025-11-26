@@ -24,6 +24,6 @@ Behavior Trees to orchestrate the skills.
    :maxdepth: 1
    :caption: Advanced Tutorials
 
-   advanced-tutorials/behavior-tree-node
-   advanced-tutorials/configuration-files
+   advancedtutorials/behavior-tree-node
+   advancedtutorials/configuration-files
 
