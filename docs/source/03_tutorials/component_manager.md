@@ -1,10 +1,11 @@
-# SIMROP functionality
+Component manager
+===================================
 
 ## Component Manager
 ![component_manager](https://github.com/user-attachments/assets/6cad59b4-2787-4e5b-aaa7-e8270709fdf4)
 
 
-A **Component Manager** will handle the lifecycle of components of a certain type. We can for instance have a Robot Manager which handles the different robots available in the current setup or a [Task Manager](#Task%20Manager) which manages the task servers which will execute the [Behavior Tree tasks](#Behavior%20Tree%20Task).
+A **Component Manager** will handle the lifecycle of components of a certain type. We can for instance have a Robot Manager which handles the different robots available in the current setup or a [Task manager](#task_manager) which manages the task servers which will execute the [Behavior Tree tasks](#Behavior%20Tree%20Task).
 
 A Component Manager can accept different [plugins](#Plugins) to change its configuration. Each Component Manager also has its own [Lifecycle Node](#Lifecycle%20Node) to cycle it through its different states.
 

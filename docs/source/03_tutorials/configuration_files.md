@@ -1,7 +1,7 @@
-
 Using configuration files
 ===================================
 
+TODO: this should be placed under the usage of a component manager, since it is configuration related to that.
 
 
 ### Configuring a Component Manager and its components
@@ -50,3 +50,5 @@ Note that a configuration package can contain configuration files for different 
 ros2 run fm_sr_task task_manager --ros-args -p config_package_name:=palletizing_configuration
 ros2 run fm_sr_robot robot_manager --ros-args -p config_package_name:=palletizing_configuration
 ```
+
+#### Specifying a configuration package in a launch file
